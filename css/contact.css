@@ -1,0 +1,466 @@
+/* -----MAIN CONTAINER SECTION----- */
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body
+{
+    background-color: rgb(252, 249, 249);
+    font-family:"Nunito" sans-serif;
+    font-weight: 400;
+    overflow-x: hidden;
+}
+.overall{
+    overflow-x: hidden;
+}
+
+nav{
+    height: 90px;
+    background-color:rgb(4, 84, 181);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 50px 0px 100px;
+}
+nav .main-container img{
+    margin-top: 10px;
+    width: 30%;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+}
+nav ul li{
+    margin: 0 30px;
+}
+nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: white
+}
+nav ul li a:hover,
+nav ul li a.active
+{
+color: black;
+}
+nav .menu-btn svg{
+    color:black;
+    font-size: 70px;
+    cursor: pointer;
+    display: none;
+}
+#click {
+    display: none;
+}
+@media  (max-width: 940px){
+    nav .menu-btn svg{
+        display: block;
+    }
+   nav ul{
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: white;
+    height: 100vh;
+    width: 100%;
+    display: block;
+    transition: all 0.3s ease;
+}
+#click:checked ~ ul{
+    left: 0%;
+}
+nav ul li{
+    margin: 40px 0;
+    text-align: center;
+    color: #145388;
+}
+nav ul li a{
+    color: #145388;
+}
+}
+
+.heading{
+    background-color: rgb(4, 84, 181);
+    color: white;
+    padding: 30px 90px;
+    width: 100%;
+    height: 30vh;
+    font-size: 20px;
+}
+
+.heading h1{
+    font-weight: 100;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+.heading p{
+    font-size: 23px;
+}
+
+
+                   /*------------- BODY-SECTION ----------------*/
+
+.input-form{
+    box-shadow: 1px 2px 1px 2px #d6d4d4;
+    padding: 40px;
+    margin: 0px 100px 0px 100px;
+     width: 700px; 
+    height: 400px;
+    background-color: white; 
+}
+
+input[type=text],  textarea {
+    width: 100%; 
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+     margin-top: 6px;
+    margin-bottom: 16px; 
+    resize: vertical;
+  }
+
+.link a{
+    text-decoration: none;
+    color: white; 
+}
+.link{
+background-color: #145388;
+height: 20px;
+ width: 60px; 
+border-radius: 25px;
+text-align: center;
+float: right;
+}
+.contact-form{
+    color: #145388;
+    padding-top: 40px;
+    font-size: 20px;
+    padding-bottom: 30px;
+    margin: 0px 100px 0px 100px;
+}
+
+.contact-form h2
+{
+    font-weight: 100;
+}
+
+.main-body
+{
+    display: flex;
+    gap: 100px;
+    flex-direction: row;
+}
+
+.contact-info h2, .contact-info h5{
+color: #145388;
+font-weight: 100;
+padding: 20px ;
+font-size: 30px;
+}
+
+.contact-info h2
+{
+    font-size: 30px;
+    padding-top: 40px;
+}
+
+.contact-info p{
+    color: rgb(104, 104, 104);
+    font-size: 20px;
+}
+
+
+            /* ----------------- FOOTER SECTION  --------------- */
+
+.footer
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 90px;
+    margin-top: 30px;
+    background-color:rgb(4, 84, 181) ;
+}
+
+.copyright
+{
+    font-size: 25px;
+    color: white;
+}
+
+.policy a
+{
+text-decoration: none;
+font-size: 25px;
+color: white;
+}
+
+                 /* ------------------- MEDIA QUERY MAX-WIDTH 500PX------------------- */
+
+@media screen and (max-width: 500px){
+    .heading{
+        padding: 20px;
+        width: 100%;
+        height: 30vh;
+        font-size: 20px;
+    }
+
+    .heading h1{
+        padding-top: 30px;
+    }
+ nav .main-container img{
+    width: 60%;
+    margin-left: -25%;
+ }
+ .main-body{
+    margin-left: -5%;
+    flex-direction: column;
+    display: flex;
+ }
+
+.input-form{
+    padding: 10px;
+    width: 350px; 
+    height: 400px;
+    margin-left: 40px;
+}
+.contact-info{
+    margin-top: -25%;
+}
+.contact-info h2{
+padding: 10px;
+margin-left: 15px;
+margin-top: 27px;
+font-size: 22px;
+}
+.contact-info p{
+    padding: 10px;
+    margin-left: 27px;
+    margin-top: -30px;
+    font-size: 12px;
+    }
+.contact-info h5{
+    margin-top: -7%;
+    font-size: 20px;
+    margin-left: 27px;
+}
+.footer
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+}
+
+.copyright, .policy a
+{
+    font-size: 12px;
+}
+
+}
+
+  /* ------------------- MEDIA QUERY MAX-WIDTH 501PX TO 700px------------------- */
+
+  @media screen and (max-width: 700px) and (min-width:501px){
+    .heading{
+        padding: 20px;
+        width: 100%;
+        height: 30vh;
+        font-size: 20px;
+    }
+
+    .heading h1{
+        padding-top: 30px;
+    }
+ nav .main-container img{
+    width: 60%;
+    margin-left: -25%;
+ }
+ .main-body{
+        margin-left: 5%;
+        flex-direction: column;
+        display: flex;
+ }
+
+.input-form{
+    padding: 10px;
+    width: 350px; 
+    height: 400px;
+    margin-left: 40px;
+}
+
+.contact-info{
+    margin-top: -25%;
+}
+.contact-info h2{
+padding: 10px;
+margin-left: 15px;
+margin-top: 27px;
+font-size: 27px;
+}
+.contact-info p{
+    padding: 10px;
+    margin-left: 27px;
+    margin-top: -30px;
+    font-size: 19px;
+    }
+.contact-info h5{
+    margin-top: -5%;
+    font-size: 22px;
+    margin-left: 27px;
+}
+.footer
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+}
+
+.copyright, .policy a
+{
+    font-size: 15px;
+}
+
+}
+
+ /* ------------------- MEDIA QUERY MAX-WIDTH 701PX TO 900px------------------- */
+
+ @media screen and (max-width: 900px) and (min-width:701px){
+    .heading{
+        padding: 20px;
+        width: 100%;
+        height: 20vh;
+        font-size: 20px;
+    }
+
+    .heading h1{
+        padding-top: 30px;
+    }
+ nav .main-container img{
+    width: 40%;
+    margin-left: -10%;
+    margin-top: 25px;
+ }
+ .main-body{
+        margin-left: 5%;
+        flex-direction: column;
+        display: flex;
+ }
+
+.input-form{
+    padding: 10px;
+    width: 400px; 
+    height: 400px;
+    margin-left: 18%;
+}
+.contact-form h2{
+    text-align: center;
+}
+.contact-info{
+    margin-top: -13%;
+    margin-bottom: 20%;
+    text-align: center;
+}
+.contact-info h2{
+padding: 10px;
+margin-left: 15px;
+margin-top: 35px;
+font-size: 27px;
+}
+.contact-info p{
+    padding: 10px;
+    margin-left: 27px;
+    margin-top: -30px;
+    font-size: 19px;
+    }
+.contact-info h5{
+    margin-top: -2%;
+    font-size: 22px;
+    margin-left: 27px;
+}
+.footer
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+}
+
+.copyright, .policy a
+{
+    font-size: 15px;
+}
+
+}
+
+ /* ------------------- MEDIA QUERY MAX-WIDTH 901PX TO 1200px------------------- */
+
+ @media screen and (max-width: 1200px) and (min-width:901px){
+    .heading{
+        padding: 20px;
+        width: 100%;
+        height: 20vh;
+        font-size: 20px;
+    }
+
+    .heading h1{
+        padding-top: 30px;
+    }
+ nav .main-container img{
+    width: 40%;
+    margin-left: -10%;
+    margin-top: 25px;
+ }
+ .main-body{
+        margin-left: 5%;
+        flex-direction: column;
+        display: flex;
+ }
+
+.input-form{
+    padding: 10px;
+    width: 500px; 
+    height: 400px;
+    margin-left: 15%;
+}
+.contact-form h2{
+    text-align: center;
+}
+.contact-info{
+    margin-top: -13%;
+    margin-bottom: 20%;
+    margin-left: 20%;
+}
+.contact-info h2{
+padding: 10px;
+margin-left: 35px;
+margin-top: 35px;
+font-size: 27px;
+}
+.contact-info p{
+    padding: 10px;
+    margin-left: 27px;
+    margin-top: -30px;
+    font-size: 19px;
+    }
+.contact-info h5{
+    margin-top: -2%;
+    font-size: 22px;
+    margin-left: 27px;
+}
+.footer
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+}
+
+.copyright, .policy a
+{
+    font-size: 19px;
+}
+
+}
